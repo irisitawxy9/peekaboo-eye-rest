@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Eye rest reminder</title>
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="card.css">
+</head>
+<body>
+  <div class="card" role="dialog" aria-labelledby="title">
+    <div class="gif" id="gifBox">
+      <img id="gif" alt="">
+      <p class="gif-msg" id="gifMsg">Finding a cute friend…</p>
+      <span class="giphy">Powered by GIPHY</span>
+    </div>
+
+    <section id="resting">
+      <h1 id="title">Time to rest your eyes</h1>
+      <p class="sub">Look at something 20 feet away and blink slowly.</p>
+      <div class="progress">
+        <div class="track"><div class="bar" id="bar"></div></div>
+        <span class="secs"><span id="secs">20</span>s</span>
+      </div>
+      <div class="buttons">
+        <button class="secondary" id="snooze">Snooze 5 min</button>
+        <button class="primary" id="done">I'm rested</button>
+      </div>
+    </section>
+
+    <section id="finished" hidden>
+      <div class="done-row">
+        <div class="check" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+        </div>
+        <div>
+          <h1 id="doneTitle">Nice work!</h1>
+          <p class="sub" id="doneText">Your eyes thank you.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="shared.js"></script>
+  <script src="card.js"></script>
+</body>
+</html>

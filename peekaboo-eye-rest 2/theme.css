@@ -1,0 +1,20 @@
+/* Peekaboo palette and font, shared by the popup and the card */
+@font-face { font-family: "Nunito"; font-weight: 500; font-display: swap; src: url("fonts/nunito-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Nunito"; font-weight: 700; font-display: swap; src: url("fonts/nunito-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "Nunito"; font-weight: 800; font-display: swap; src: url("fonts/nunito-latin-800-normal.woff2") format("woff2"); }
+
+:root {
+  --cream: #FFF8EC;
+  --olive: #546B41;      /* main accent; white text on it passes contrast */
+  --olive-dark: #3F5231; /* hover */
+  --sage: #99AD7A;
+  --tan: #DCCCAC;
+  --tan-light: #EFE4CF;
+  --ink: #26332A;
+  --muted: #6E665B;
+  --font: "Nunito", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+/* Chrome gives extension pages its own body font; "html body" outranks it */
+html body, html body button, html body input { font-family: var(--font); }
+button:focus-visible, input:focus-visible { outline: 3px solid var(--sage); outline-offset: 2px; }

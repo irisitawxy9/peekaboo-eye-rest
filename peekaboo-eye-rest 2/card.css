@@ -1,0 +1,74 @@
+html, body { margin: 0; height: 100%; background: transparent; }
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;       /* bottom corners: card hugs the bottom */
+  padding: 12px;
+  box-sizing: border-box;
+  color: var(--ink);
+}
+body.top { align-items: flex-start; }
+body.standalone { background: var(--cream); align-items: center; }
+body.standalone .card { box-shadow: none; }
+
+.card {
+  width: 320px;
+  box-sizing: border-box;
+  background: var(--cream);
+  border: 2px solid var(--tan);
+  border-radius: 22px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 4px 10px rgba(38, 51, 42, .16);
+}
+
+.gif {
+  position: relative;
+  height: 208px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: repeating-linear-gradient(135deg, var(--tan-light) 0 12px, #E6D8BC 12px 24px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gif img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .3s; }
+.gif img.loaded { opacity: 1; }
+.gif-msg { margin: 0 16px; font-size: 13px; font-weight: 800; text-align: center; }
+.giphy {
+  position: absolute; right: 8px; bottom: 8px;
+  padding: 3px 8px; border-radius: 6px;
+  background: rgba(20, 20, 19, .72); color: #FFFFFF;
+  font-size: 11px; font-weight: 700;
+}
+
+h1 { margin: 0; font-size: 17px; font-weight: 800; line-height: 1.25; }
+.sub { margin: 4px 0 0; font-size: 14px; font-weight: 500; color: var(--muted); }
+
+.progress { display: flex; align-items: center; gap: 10px; margin-top: 12px; }
+.track { flex: 1; height: 8px; border-radius: 999px; background: var(--tan); overflow: hidden; }
+.bar { height: 100%; width: 100%; border-radius: 999px; background: var(--olive); transition: width 1s linear; }
+.secs { min-width: 32px; text-align: right; font-size: 14px; font-weight: 800; color: var(--olive); }
+
+.buttons { display: flex; gap: 8px; margin-top: 12px; }
+button {
+  flex: 1; height: 44px; border: none; border-radius: 999px;
+  font-size: 14px; font-weight: 800; cursor: pointer;
+}
+.primary { background: var(--olive); color: #FFFFFF; }
+.primary:hover { background: var(--olive-dark); }
+.secondary { background: var(--tan); color: var(--ink); }
+.secondary:hover { background: #D2BF99; }
+
+.done-row { display: flex; align-items: center; gap: 12px; padding: 4px 0 6px; }
+.check {
+  width: 44px; height: 44px; flex: none; border-radius: 50%;
+  background: var(--sage); color: var(--ink);
+  display: flex; align-items: center; justify-content: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bar, .gif img { transition: none; }
+}

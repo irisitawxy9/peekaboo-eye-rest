@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Peekaboo Eye Rest",
+  "version": "2.0.2",
+  "description": "A cute animal GIF peeks out from the corner of your screen when it's time to rest your eyes.",
+  "permissions": ["alarms", "storage", "scripting", "notifications"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Peekaboo Eye Rest",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["card.html", "card.css", "card.js", "shared.js", "theme.css", "fonts/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
